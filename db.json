@@ -1,0 +1,12 @@
+{
+  "clients": [
+    {
+      "name": "Juan",
+      "company": "Código con juan",
+      "email": "correo@correo.com",
+      "telephone": "095082256",
+      "notes": "Cliente recomendado por otro",
+      "id": 1
+    }
+  ]
+}
