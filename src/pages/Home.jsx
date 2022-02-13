@@ -13,7 +13,7 @@ export default function Home() {
     useEffect(() => {
         const getClientsAPI = async () => {
             try {
-                const url = 'http://localhost:4000/clients'
+                const url = import.meta.env.VITE_API_URL
 
                 const response = await fetch(url)
                 const result = await response.json()
@@ -39,7 +39,7 @@ export default function Home() {
 
         if (result.isConfirmed) {
             try {
-                const url = `http://localhost:4000/clients/${id}`
+                const url = `${import.meta.env.VITE_API_URL}/${id}`
                 await fetch(url, {
                     method: 'DELETE',
                 })

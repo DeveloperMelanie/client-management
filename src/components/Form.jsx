@@ -29,7 +29,7 @@ export default function Formulary({ client }) {
         try {
             if (client.id) {
                 // Edit client
-                const url = `http://localhost:4000/clients/${client.id}`
+                const url = `${import.meta.env.VITE_API_URL}/${client.id}`
 
                 await fetch(url, {
                     method: 'PUT',
@@ -40,7 +40,7 @@ export default function Formulary({ client }) {
                 })
             } else {
                 // Create client
-                const url = 'http://localhost:4000/clients'
+                const url = import.meta.env.VITE_API_URL
 
                 await fetch(url, {
                     method: 'POST',
